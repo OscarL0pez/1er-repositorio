@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Enlaces, Tablas y Multimedia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML - Enlaces, Tablas y Etiquetas Multimedia</h1>
+    
+    <h2>Enlaces</h2>
+    <p>Los enlaces son hipervínculos que pueden ser externos o locales.</p>
+    <a href="https://www.google.com/">Google</a><br>
+    <a href="#tablas">Tablas</a>
+    
+    <h2>Multimedia</h2>
+    <p>Necesitas un tag concreto y los atributos correctos.</p>
+    
+    <h3>Imágenes</h3>
+    <img src="https://concepto.de/wp-content/uploads/2018/08/monta%C3%B1as-e1533762816593.jpg" width="500" alt="Montañas">
+    
+    <h3>Vídeo</h3>
+    <video width="640" height="360" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.webm" type="video/webm">
+    </video>
+    
+    <h3>Audio</h3>
+    <audio controls>
+        <source src="car.ogg" type="audio/ogg">
+        <source src="car.mp3" type="audio/mpeg">
+    </audio>
+    
+    <h2 id="tablas">Tablas</h2>
+    <p>Se crean las filas y luego se ponen las columnas dentro de las filas.</p>
+    
+    <table>
+        <tr>
+            <th>Primera fila - Primera columna</th>
+            <th>Primera fila - Segunda columna</th>
+        </tr>
+        <tr>
+            <td>Segunda fila - Primera columna</td>
+            <td>Segunda fila - Segunda columna</td>
+            <td>Segunda fila - Tercera columna</td>
+        </tr>
+        <tr>
+            <td>Tercera fila - Primera columna</td>
+        </tr>
+    </table>
+    
+    <h2>Atributos de la tabla</h2>
+    
+    <h3>Colspan</h3>
+    <p>El colspan es un atributo que sirve para aumentar la celda en tantas columnas como su número indique.</p>
+    <table>
+        <tr>
+            <td colspan="2">Esta celda ocupa 2 columnas</td>
+        </tr>
+    </table>
+    
+    <h3>Rowspan</h3>
+    <p>El rowspan es un atributo que sirve para aumentar la celda en tantas filas como su número indique.</p>
+    <table>
+        <tr>
+            <td rowspan="2">Esta celda ocupa 2 filas</td>
+            <td>Fila 1, Columna 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2, Columna 2</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura - Gimnasio de Gervasio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .positive {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Factura - Gimnasio de Gervasio</caption>
+        <tr>
+            <th colspan="2">Factura #123456789</th>
+            <th>11 Marzo 2025</th>
+        </tr>
+        <tr>
+            <td>
+                <strong>Pago para:</strong><br>
+                Gimnasio de Gervasio.<br>
+                123 Detras de la Montaña.<br>
+                Los Alpes, Eu 12345
+            </td>
+            <td colspan="2">
+                <strong>Usuario:</strong><br>
+                Angel Segundo<br>
+                321 Willow Way<br>
+                Venezuela, Ve 54321
+            </td>
+        </tr>
+        <tr>
+            <th>Nombre / Descripción.</th>
+            <th>Cantidad.</th>
+            <th>Costo.</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>Mancuernas</td>
+            <td>10</td>
+            <td>100$</td>
+            <td class="positive">$1000</td>
+        </tr>
+        <tr>
+            <td>Combas</td>
+            <td>10</td>
+            <td>25$</td>
+            <td class="positive">$250.00</td>
+        </tr>
+        <tr>
+            <td>Bicicletas</td>
+            <td>5</td>
+            <td>150$</td>   
+            <td class="positive">$750.00</td>
+        </tr>
+        <tr>
+            <td>Colchonetas</td>   
+            <td>15</td>
+            <td>10$</td>
+            <td class="positive">$150.00</td>
+        </tr>
+        <tr>
+            <td colspan="3"><strong>Subtotal</strong></td>
+            <td class="positive">$2150.00</td>
+        </tr>
+        <tr>
+            <td>IVA</td>
+            <td>21%</td>
+            <td colspan="2" class="positive">$451.50</td>
+        </tr>
+        <tr>
+            <th colspan="3">Total:</th>
+            <th class="positive">$2601.50</th>
+        </tr>
+        <tr>
+            <td colspan="3">Método de pago</td>
+            <td>Tarjeta de crédito</td>
+        </tr>
+    </table>
+    <p style="color: blue;">
+        Para más información, visita este <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">video informativo</a>.
+    </p>
+</body>
+</html>
