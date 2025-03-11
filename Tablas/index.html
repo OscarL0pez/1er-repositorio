@@ -29,11 +29,14 @@
         .positive {
             color: green;
         }
+        .currency {
+            text-align: right;
+        }
     </style>
 </head>
 <body>
     <table>
-        <caption>Factura - Gimnasio de Gervasio</caption>
+        <caption><b>Factura - Gimnasio de Gervasio</b></caption></caption>
         <tr>
             <th colspan="2">Factura #123456789</th>
             <th>11 Marzo 2025</th>
@@ -61,43 +64,43 @@
         <tr>
             <td>Mancuernas</td>
             <td>10</td>
-            <td>100$</td>
-            <td class="positive">$1000</td>
+            <td class="currency">$100.00</td>
+            <td class="positive currency">$1,000.00</td>
         </tr>
         <tr>
             <td>Combas</td>
             <td>10</td>
-            <td>25$</td>
-            <td class="positive">$250.00</td>
+            <td class="currency">$25.00</td>
+            <td class="positive currency">$250.00</td>
         </tr>
         <tr>
             <td>Bicicletas</td>
             <td>5</td>
-            <td>150$</td>   
-            <td class="positive">$750.00</td>
+            <td class="currency">$150.00</td>   
+            <td class="positive currency">$750.00</td>
         </tr>
         <tr>
             <td>Colchonetas</td>   
             <td>15</td>
-            <td>10$</td>
-            <td class="positive">$150.00</td>
+            <td class="currency">$10.00</td>
+            <td class="positive currency">$150.00</td>
         </tr>
         <tr>
             <td colspan="3"><strong>Subtotal</strong></td>
-            <td class="positive">$2150.00</td>
+            <td class="positive currency">$2,150.00</td>
         </tr>
         <tr>
             <td>IVA</td>
             <td>21%</td>
-            <td colspan="2" class="positive">$451.50</td>
+            <td colspan="2" class="positive currency">$451.50</td>
         </tr>
         <tr>
             <th colspan="3">Total:</th>
-            <th class="positive">$2601.50</th>
+            <th class="positive currency">$2,601.50</th>
         </tr>
         <tr>
             <td colspan="3">Método de pago</td>
-            <td>Tarjeta de crédito</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="50"></td>
         </tr>
     </table>
     <p style="color: blue;">
