@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML con colores</title>
+</head>
+<body bgcolor="#f4f4f4">
+
+    <!-- Formulario de Inicio de Sesión -->
+    <table border="1" bgcolor="lightblue" width="50%" align="center" cellpadding="10">
+        <tr>
+            <td>
+                <font size="5" color="black"><b>Iniciar Sesión</b></font>
+                <form action="login.php" method="POST">
+                    <p><b>Correo Electrónico:</b> <input type="email" name="email" required></p>
+                    <p><b>Contraseña:</b> <input type="password" name="password" required></p>
+                    <p><input type="submit" value="Ingresar"></p>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- Formulario de Contacto -->
+    <table border="1" bgcolor="lightgreen" width="50%" align="center" cellpadding="10">
+        <tr>
+            <td>
+                <font size="5" color="black"><b>Formulario de Contacto</b></font>
+                <form action="contacto.php" method="POST">
+                    <p><b>Nombre:</b> <input type="text" name="nombre" required></p>
+                    <p><b>Correo Electrónico:</b> <input type="email" name="correo" required></p>
+                    <p><b>Mensaje:</b></p>
+                    <textarea name="mensaje" rows="4" cols="40" required></textarea>
+                    <p><input type="submit" value="Enviar Mensaje"></p>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- Formulario de Encuesta -->
+    <table border="1" bgcolor="lightcoral" width="50%" align="center" cellpadding="10">
+        <tr>
+            <td>
+                <font size="5" color="black"><b>Encuesta de Satisfacción</b></font>
+                <form action="encuesta.php" method="POST">
+                    <p><b>¿Cómo calificarías nuestro servicio?</b></p>
+                    <input type="radio" name="calificacion" value="excelente" required> Excelente
+                    <input type="radio" name="calificacion" value="bueno"> Bueno
+                    <input type="radio" name="calificacion" value="regular"> Regular
+                    <input type="radio" name="calificacion" value="malo"> Malo
+
+                    <p><b>¿Qué podríamos mejorar?</b></p>
+                    <textarea name="mejorar" rows="3" cols="40"></textarea>
+
+                    <p><b>¿Nos recomendarías?</b></p>
+                    <select name="recomendar">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                        <option value="quizas">Tal vez</option>
+                    </select>
+
+                    <p><input type="submit" value="Enviar Encuesta"></p>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
