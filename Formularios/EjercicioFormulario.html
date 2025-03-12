@@ -39,7 +39,7 @@
             font-weight: bold;
         }
         input, textarea, select {
-            width: 100%;
+            width: 90%;
             padding: 8px;
             margin: 5px 0;
             border: 1px solid #ccc;
@@ -47,13 +47,25 @@
         }
         .checkbox-container {
             display: flex;
-            align-items: center;
+            align-items: middle;
             margin: 5px 0;
         }
         .checkbox-container input {
-            margin-left: 10px;
+            margin-left: 10px; 
+            align-items: middle;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
         }
         button {
+            align-items: center;
             background: #2980b9;
             color: white;
             padding: 10px;
@@ -65,7 +77,25 @@
         }
         button:hover {
             background: #1c5d8a;
+    
         }
+        .form-group label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+        .checkbox-group{
+            display: flex;
+            align-items: center;
+            align-items: center;
+            width: 200px;
+        }
+
+        .checkbox-group label {
+            flex-grow: 1;
+            text-align: middle;
+        }
+
     </style>
 </head>
 
@@ -105,19 +135,19 @@
                 <label for="fecha2">Elija una fecha:</label>
                 <input type="date" id="fecha2" name="fecha2">
                 <br><br>
-                <div class="checkbox-container">
+                <div class="checkbox-group">
                     <label for="eclipse">Eclipse</label>
                     <input type="checkbox" id="eclipse" name="ide" value="ideeclipse">
                 </div>
-                <div class="checkbox-container">
+                <div class="checkbox-group">
                     <label for="netbeans">Netbeans</label>
                     <input type="checkbox" id="netbeans" name="ide" value="idenetbeans">
                 </div>
-                <div class="checkbox-container">
+                <div class="checkbox-group">
                     <label for="notepad">Notepad</label>
                     <input type="checkbox" id="notepad" name="ide" value="idenotepad">
                 </div>
-                <div class="checkbox-container">
+                <div class="checkbox-group">
                     <label for="idea">IDEA</label>
                     <input type="checkbox" id="idea" name="ide" value="ideidea">
                 </div>
