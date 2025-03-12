@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Avanzado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            text-align: center;
+        }
+        .form-container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        fieldset {
+            border: 2px solid #2980b9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #2980b9;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .checkbox-container input {
+            margin-left: 10px;
+        }
+        button {
+            background: #2980b9;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #1c5d8a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Preferencias</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos">
+                
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Información Adicional</legend>
+                <label for="mensaje">Por favor, escriba aquí:</label>
+                <textarea id="mensaje" name="mensaje" rows="8" cols="50">Por favor, escriba aquí</textarea>
+                
+                <label for="fecha">Elija una fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Rellene las opciones siguientes</legend>
+                <label for="medio_transporte">Seleccione un medio de transporte:</label>
+                <select id="medio_transporte" name="medio_transporte">
+                    <option value="automovil">Automóvil</option>
+                    <option value="moto">Moto</option>
+                    <option value="autobus">Autobús</option>
+                </select>
+                <br><br>
+                <label for="fecha2">Elija una fecha:</label>
+                <input type="date" id="fecha2" name="fecha2">
+                <br><br>
+                <div class="checkbox-container">
+                    <label for="eclipse">Eclipse</label>
+                    <input type="checkbox" id="eclipse" name="ide" value="ideeclipse">
+                </div>
+                <div class="checkbox-container">
+                    <label for="netbeans">Netbeans</label>
+                    <input type="checkbox" id="netbeans" name="ide" value="idenetbeans">
+                </div>
+                <div class="checkbox-container">
+                    <label for="notepad">Notepad</label>
+                    <input type="checkbox" id="notepad" name="ide" value="idenotepad">
+                </div>
+                <div class="checkbox-container">
+                    <label for="idea">IDEA</label>
+                    <input type="checkbox" id="idea" name="ide" value="ideidea">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Datos de Contacto</legend>
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni">
+                
+                <label for="nombre2">Nombre:</label>
+                <input type="text" id="nombre2" name="nombre2">
+                <br><br>
+                <label for="hora">Elija una hora:</label>
+                <input type="time" id="hora" name="hora">
+                <br><br>
+                <label for="color">Elija un color:</label>
+                <input type="color" id="color" name="color">
+            </fieldset>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

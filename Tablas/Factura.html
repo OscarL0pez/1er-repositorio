@@ -1,116 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factura - Gimnasio de Gervasio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f0f0f0;
-        }
-        caption {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .positive {
-            color: green;
-        }
-        .currency {
-            text-align: right;
-        }
-    </style>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <title>Formulario Básico</title> <!-- Título de la página -->
 </head>
 <body>
-    <table>
-        <caption><b>Factura - Gimnasio de Gervasio</b></caption>
-        <tr>
-            <th colspan="2">Factura #123456789</th>
-            <th>11 Marzo 2025</th>
-        </tr>
-        <tr>
-            <td rowspan="2">
-                <strong>Pago para:</strong><br>
-                Gimnasio de Gervasio.<br>
-                123 Detras de la Montaña.<br>
-                Los Alpes, Eu 12345
-            </td>
-            <td colspan="2">
-                <strong>Usuario:</strong><br>
-                Angel Segundo<br>
-                321 Willow Way<br>
-                Venezuela, Ve 54321
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <strong>Fecha de Pago:</strong><br>
-                11 Marzo 2025
-            </td>
-        </tr>
-        <tr>
-            <th>Nombre / Descripción.</th>
-            <th>Cantidad.</th>
-            <th>Costo.</th>
-            <th>Total</th>
-        </tr>
-        <tr>
-            <td>Mancuernas</td>
-            <td>10</td>
-            <td class="currency">$100.00</td>
-            <td class="positive currency">$1,000.00</td>
-        </tr>
-        <tr>
-            <td>Combas</td>
-            <td>10</td>
-            <td class="currency">$25.00</td>
-            <td class="positive currency">$250.00</td>
-        </tr>
-        <tr>
-            <td>Bicicletas</td>
-            <td>5</td>
-            <td class="currency">$150.00</td>   
-            <td class="positive currency">$750.00</td>
-        </tr>
-        <tr>
-            <td>Colchonetas</td>   
-            <td>15</td>
-            <td class="currency">$10.00</td>
-            <td class="positive currency">$150.00</td>
-        </tr>
-        <tr>
-            <td colspan="3"><strong>Subtotal</strong></td>
-            <td class="positive currency">$2,150.00</td>
-        </tr>
-        <tr>
-            <td>IVA</td>
-            <td>21%</td>
-            <td colspan="2" class="positive currency">$451.50</td>
-        </tr>
-        <tr>
-            <th colspan="3">Total:</th>
-            <th class="positive currency">$2,601.50</th>
-        </tr>
-        <tr>
-            <td colspan="3">Método de pago</td>
-            <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="50"></td>
-        </tr>
-    </table>
-    <p style="color: blue;">
-        Para más información, visita este <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">video informativo</a>.
-    </p>
+    <form action="#" method="POST"> <!-- Formulario que envía datos mediante POST -->
+        <fieldset>
+            <legend>Preferencias</legend> <!-- Título del fieldset -->
+            <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+            <input type="text" id="nombre" name="nombre"> <!-- Campo de texto para el nombre -->
+            <br> 
+            <label for="apellidos">Apellidos:</label> <!-- Etiqueta para el campo de apellidos -->
+            <input type="text" id="apellidos" name="apellidos"> <!-- Campo de texto para los apellidos -->
+            <br> 
+            <label for="direccion">Dirección:</label> <!-- Etiqueta para el campo de dirección -->
+            <input type="text" id="direccion" name="direccion"> <!-- Campo de texto para la dirección -->
+            <br> 
+            <label for="mensaje">Por favor, escriba aquí:</label> <!-- Etiqueta para el campo de mensaje -->
+            <textarea id="mensaje" name="mensaje" rows="8" cols="50">Por favor, escriba aquí</textarea> <!-- Área de texto para el mensaje -->
+            <br> 
+            <label for="fecha">Elija una fecha:</label> <!-- Etiqueta para el campo de fecha -->
+            <input type="date" id="fecha" name="fecha"> <!-- Campo de selección de fecha -->
+        </fieldset>
+        
+        <fieldset>
+            <legend>Rellene las opciones siguientes</legend> <!-- Título del fieldset -->
+            <label for="medio_transporte">Seleccione un medio de transporte:</label> <!-- Etiqueta para el campo de medio de transporte -->
+            <select id="medio_transporte" name="medio_transporte"> <!-- Menú desplegable para seleccionar medio de transporte -->
+                <option value="automovil">Automóvil</option> <!-- Opción de automóvil -->
+                <option value="moto">Moto</option> <!-- Opción de moto -->
+                <option value="autobus">Autobús</option> <!-- Opción de autobús -->
+            </select>
+            <br> <!-- Salto de línea para separación visual -->
+            <label for="fecha2">Elija una fecha:</label> <!-- Etiqueta para el campo de fecha -->
+            <input type="date" id="fecha2" name="fecha2"> <!-- Campo de selección de fecha -->
+            <br> 
+            <input type="checkbox" id="eclipse" name="ide" value="ideeclipse"> <!-- Casilla de verificación para Eclipse -->
+            <label for="eclipse">Eclipse</label> <!-- Etiqueta para Eclipse -->
+            <input type="checkbox" id="netbeans" name="ide" value="idenetbeans"> <!-- Casilla de verificación para Netbeans -->
+            <label for="netbeans">Netbeans</label> <!-- Etiqueta para Netbeans -->
+            <input type="checkbox" id="notepad" name="ide" value="idenotepad"> <!-- Casilla de verificación para Notepad -->
+            <label for="notepad">Notepad</label> <!-- Etiqueta para Notepad -->
+            <input type="checkbox" id="idea" name="ide" value="ideidea"> <!-- Casilla de verificación para IDEA -->
+            <label for="idea">IDEA</label> <!-- Etiqueta para IDEA -->
+        </fieldset>
+        
+        <fieldset>
+            <legend>Información Adicional</legend> <!-- Título del fieldset -->
+            <label for="dni">DNI:</label> <!-- Etiqueta para el campo de DNI -->
+            <input type="text" id="dni" name="dni"> <!-- Campo de texto para el DNI -->
+            <label for="nombre2">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+            <input type="text" id="nombre2" name="nombre2"> <!-- Campo de texto para el nombre -->
+            <br> <!-- Salto de línea para separación visual -->
+            <label for="hora">Elija una hora:</label> <!-- Etiqueta para el campo de hora -->
+            <input type="time" id="hora" name="hora"> <!-- Campo de selección de hora -->
+            <br> <!-- Salto de línea para separación visual -->
+            <label for="color">Elija un color:</label> <!-- Etiqueta para el campo de color -->
+            <input type="color" id="color" name="color"> <!-- Campo de selección de color -->
+        </fieldset>
+        
+        <button type="submit">Enviar</button> <!-- Botón para enviar el formulario -->
+    </form>
 </body>
 </html>
