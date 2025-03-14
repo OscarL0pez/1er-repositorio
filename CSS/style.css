@@ -1,0 +1,36 @@
+body{
+text-align: center;
+background-color: orange;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin-top: 10px;
+  
+}
+.container{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 50px;
+   margin-left: 100px;
+   margin-right: 100px;
+
+   
+}
+
+.topbox{
+   width: 200px;
+   height: 100px;
+   display: inline;
+   justify-content: space-between;
+   margin: auto;
+}
+
+.topbox{
+   margin-top: 25px;
+   padding: auto;
+   display: flex;
+   flex-direction: column;
+}
+

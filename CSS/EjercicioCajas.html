@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio cajas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>EJERCICIOS DE LAS CAJAS</h1>
+    <div class="container">
+        <div class="caja caja1"></div>
+        <div class="caja caja2"></div>
+        <div class="caja caja3"></div>
+    </div>
+    <div class="topbox">
+        <button onclick="addBox()">Agregar una caja</button>
+        <button onclick="removeBox()">Eliminar una caja</button>
+        <button onclick="toggleColors()">Cambiar colores</button>
+        <button onclick="resetAllBoxes()">Reset all</button>
+    </div>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function toggleColors() {
+            const cajas = document.querySelectorAll('.caja');
+            cajas.forEach(caja => {
+                caja.style.backgroundColor = getRandomColor();
+            });
+        }
+
+        function addBox() {
+            const container = document.querySelector('.container');
+            const currentBoxCount = container.children.length;
+            if (currentBoxCount < 5) {
+                const newBox = document.createElement('div');
+                newBox.className = `caja caja${currentBoxCount + 1}`;
+                newBox.textContent = `Caja ${currentBoxCount + 1}`;
+                newBox.style.border = '5px solid black';
+                newBox.style.width = '100px';
+                newBox.style.height = '100px';
+                newBox.style.backgroundColor = getRandomColor();
+                container.appendChild(newBox);
+            } else {
+                alert('No se pueden agregar más de 5 cajas.');
+            }
+        }
+
+        function removeBox() {
+            const container = document.querySelector('.container');
+            const currentBoxCount = container.children.length;
+            if (currentBoxCount > 0) {
+                container.removeChild(container.lastElementChild);
+            } else {
+                alert('No hay cajas para eliminar.');
+            }
+        }
+
+        function resetAllBoxes() {
+            const container = document.querySelector('.container');
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+         
+            for (let i = 1; i <= 0; i++) {
+                const newBox = document.createElement('div');
+                newBox.className = `caja caja${i}`;
+                newBox.textContent = `Caja ${i}`;
+                newBox.style.border = '5px solid black';
+                newBox.style.width = '100px';
+                newBox.style.height = '100px';
+                newBox.style.backgroundColor = getRandomColor();
+                container.appendChild(newBox);
+            }
+        }
+    </script>
+</body>
+</html>
