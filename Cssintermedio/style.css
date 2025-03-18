@@ -17,7 +17,16 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+
   }
+  .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+
+  }
+  
   .box {
     width: 150px;
     height: 150px;
@@ -32,12 +41,12 @@ body {
   
   /* Ejemplo de translate: mueve la caja 50px a la derecha y 20px hacia abajo */
   .translate:hover {
-    transform: translate(50px, 20px);
+    transform: perspective(200px) translateZ(20px);
   }
   
   /* Ejemplo de rotate: rota la caja 45 grados */
   .rotate:hover {
-    transform: rotate(45deg);
+    transform: rotatey(180deg);
   }
   
   /* Ejemplo de scale: escala la caja 1.5 veces su tamaño original */
@@ -55,3 +64,126 @@ body {
     transform: translate(20px, 20px) rotate(30deg) scale(1.2) skew(10deg, 5deg);
   }
   
+  #buttonShop {
+    color: #fff;
+    font-size: 1.2em;
+       background-color: #3498db;
+       color: white;
+       padding: 10px 20px;
+       border: none;
+       cursor: pointer;
+       /* La transición se aplica a background-color y transform */
+       transition: background-color 1s ease, transform 0.5s ease-in-out;
+     }
+ 
+     #buttonShop:hover {
+       background-color: #e74c3c;
+       transform: scale(1.1);
+     }
+     .retraso {
+      width: 100px;
+      height: 100px;
+      background: red;
+      transition: width 0.5s ease-out 0.5s;
+    }
+ 
+    .retraso:hover {
+      width: 300px;
+    }
+    .individuales {
+      width: 150px;
+      height: 150px;
+      background-color: #8e44ad;
+      /* Se aplican transiciones diferentes para cada propiedad */
+      transition-property: width, background-color;
+      transition-duration: 1s, 0.5s;
+      transition-timing-function: ease-in-out, linear;
+      transition-delay: 0s, 0.5s;
+    }
+
+    .individuales:hover {
+      width: 300px;
+      background-color: #e67e22;
+    }
+
+     .ejercicio {
+      margin-bottom: 80px;
+      background-color: #8e44ad;
+      transition-property: background-color, width, height, transform;
+      transition-duration: 1s, 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s, 1s;
+    
+    }
+
+    .ejercicio:hover {
+      background-color: #e67e22;
+      width: 170px; 
+      height: 170px; 
+      transform: rotate(45deg) scale(1.1);
+    }
+
+    .ejercicio h1 {
+      font-size: 20px;
+      position: relative;
+      text-align: center;
+      color: #fff;
+      transition: transform 2s ease, color 2s ease;
+      transition-delay: 1s, 1s;
+      margin-bottom: 130px; 
+    }
+    
+    .ejercicio:hover h1 {
+      transform: translateX(45px); 
+      color: blue; 
+    }
+
+    .ejercicio1 {
+      margin-top: 10x;
+      margin-bottom: 60px;
+      background-color: #8e44ad;
+      transition: transform 3s ease-in-out;
+      
+      
+  }
+  
+  .ejercicio1:hover {
+      transform: translateX(300px) rotate(360deg);
+  }
+  
+  .ejercicio1 h1 {
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    transition: transform 2s ease, color 2s ease;
+    transition-delay: 1s, 1s;
+    margin-bottom: 130px; 
+  }
+
+  #buttonbutton {
+  background: linear-gradient(45deg, #ff6b6b, #ffa07a);
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#buttonbutton:hover {
+    transform: scale(1.1) translateY(-5px) rotate(3deg);
+    box-shadow: 0px 10px 20px rgba(255, 107, 107, 0.4);
+}
+
+
+#buttonbutton:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow: 0px 5px 10px rgba(255, 107, 107, 0.2);
+}
