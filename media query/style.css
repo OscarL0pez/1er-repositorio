@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    width: 100vw; 
+    height: 10vh;  
+    padding: 0;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 0; 
+    display: none; 
+}
+
+
+#box1 {
+    background-color: darkblue;
+    color: black;
+}
+
+#box2 {
+    background-color: blue;
+    color: black;
+}
+
+#box3 {
+    background-color: lightblue;
+    color: black;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        
+    }
+}
+
+
+
+/* Media Query para pantallas de 600px o menos (Prueba 1) */
+@media (max-width: 600px) {
+    #prueba1 {
+        color: red;
+        font-size: 5vw; 
+
+    }
+
+    
+    #box1, #box2, #box3 {
+        display: block;
+        height: 15vh; 
+    }
+
+    /*Oculta Prueba 2 y 3, y sus recuadros */
+    #prueba2, #prueba3,
+    #box4, #box5, #box6,
+    #box7, #box8, #box9 {
+        display: none;
+    }
+}
+
+/*Estilos de PRUEBA 2 */
+#box4 {
+    background-color: pink;
+    color: black;
+}
+
+#box5 {
+    background-color: red;
+    color: black;
+}
+
+#box6 {
+    background-color: maroon;
+    color: black;
+}
+
+/*min 600px y max 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+    #prueba2 {
+        color: green;
+        font-size: 4vw;
+        font-style: italic;
+    }
+
+   
+    #box4, #box5, #box6 {
+        display: block;
+        height: 12vh; 
+    }
+
+  
+    #prueba1, #prueba3,
+    #box1, #box2, #box3,
+    #box7, #box8, #box9 {
+        display: none;
+    }
+}
+
+
+#box7 {
+    background-color: darkgreen;
+    color: black;
+}
+
+#box8 {
+    background-color: green;
+    color: black;
+}
+
+#box9 {
+    background-color: lightgreen;
+    color: black;
+}
+
+/*Media Query para pantallas mayores a 900px (Prueba 3) */
+@media (min-width: 900px) {
+    #prueba3 {
+        color: blue;
+        font-size: 3vw;
+        text-decoration: underline;
+    }
+
+  
+    #box7, #box8, #box9 {
+        display: block;
+        height: 10vh; 
+    }
+
+
+}

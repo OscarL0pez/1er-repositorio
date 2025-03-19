@@ -1,0 +1,152 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.header { 
+    background-color: #0096FF; 
+} 
+
+.hero { 
+    background-color: #D32F2F; 
+} 
+
+.content { 
+    background-color: #4CAF50; 
+} 
+
+.sidebar { 
+    background-color: #673AB7; 
+} 
+
+.footer { 
+    background-color: #616161; 
+} 
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .header {
+        grid-column: span 2;
+    }
+
+    .hero {
+        grid-column: span 2;
+    }
+
+    .content {
+        grid-column: span 2;
+    }
+
+    .sidebar {
+        grid-column: 1;
+    }
+
+    .footer {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .hero {
+        grid-column: span 1;
+    }
+
+    .content {
+        grid-column: 1;
+    }
+
+    .sidebar {
+        grid-column: 2;
+        grid-row: span 2;
+    }
+
+    .footer {
+        grid-column: span 2;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: 2fr 1fr; 
+        gap: 10px;
+    }
+
+    .header {
+        grid-column: span 2;
+    }
+
+    .hero {
+        grid-column: span 2;
+    }
+
+    .content {
+        grid-column: 1; 
+    }
+
+    .sidebar {
+        grid-column: 2; 
+        grid-row: span 1;
+    }
+
+    .footer {
+        grid-column: span 2;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 2fr 1fr; 
+    }
+
+    .header, .hero, .footer {
+        grid-column: span 2; 
+    }
+
+    .content {
+        grid-column: 1; 
+    }
+
+    .sidebar {
+        grid-column: 2; 
+        grid-row: span 2; 
+    }
+
+    .footer {
+        grid-column: span 2;
+    }
+}
